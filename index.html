@@ -30,7 +30,8 @@
      </header>
      
    <main class="wrapper">
- 
+ <h2> What this page does:</h2>
+ <p>This Site uses a simple form to collect information.When the form is submitted, the JavaScript function titleCase(str) is invoked to process the input string, converting it to title case (i.e., the first letter capitalized and the rest in lowercase). The transformed text is then displayed below the form inside the div with the id "output."</p>
     <h2 class="subheader">Place form code below:</h2>
     <div id="output"></div>;
     <form method="post" action="" class="main-form">
@@ -54,18 +55,19 @@
   <script>
 
     function titleCase(str){
-      return str.charAt(0).toUpperCase();+ str.slice(1).toLowerCase();
+      return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     }
     
     const mySubmit = document.querySelector("#submit");
     console.log(mySubmit);
+    
     mySubmit.addEventListener("click",function(ev){
       ev.preventDefault();
       const myInput = document.querySelector("#input");
       const myOutput = document.querySelector("#output");
       let myString = myInput.value;
       myString = titleCase(myString);
-      myOutput.innerHTML = titleCase(myString);
+      myOutput.innerHTML = myString;
       //alert(myInput.value);
     });
 
